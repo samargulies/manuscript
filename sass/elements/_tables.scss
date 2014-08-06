@@ -1,8 +1,30 @@
 table {
-	margin: 0 0 1.5em;
 	width: 100%;
+	margin: 22px 0;
+	margin: 2.2rem 0;
+	text-align: left;
+	border: 1px solid #eaecee;
+	border-left: 0;
 }
-
-th {
+table caption {
 	font-weight: bold;
+	margin-bottom: 22px;
+	margin-bottom: 2.2rem;
+}
+table th, table td {
+	padding: 11px 8px;
+	padding: 1.1rem .8rem;
+}
+table th {
+	border-left: 1px solid #eaecee;
+}
+table td {
+	border-top: 1px solid #eaecee;
+	border-left: 1px solid #eaecee;
+}
+table td[valign="top"] {
+	vertical-align: top;
+}
+table td[valign="bottom"] {
+	vertical-align: bottom;
 }

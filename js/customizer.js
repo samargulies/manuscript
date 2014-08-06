@@ -8,7 +8,7 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
+			$( '.site-title a span' ).text( to );
 		} );
 	} );
 	wp.customize( 'blogdescription', function( value ) {
@@ -25,12 +25,39 @@
 					'position': 'absolute'
 				} );
 			} else {
-				$( '.site-title, .site-description' ).css( {
+				$( '.site-title, .bypostauthor .fn' ).css( {
 					'clip': 'auto',
 					'color': to,
 					'position': 'relative'
 				} );
+				$( '.site-description' ).css( 'position', 'relative' );
 			}
+		} );
+	} );
+	// Accent color.
+	wp.customize( 'accent_color', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-title .background-path' ).css( {
+				'fill': to
+			} );
+			$( '.sticky' ).css( {
+				'border-color': to
+			} );
+			$( '.bypostauthor .fn' ).css( {
+				'background-color': to
+			} );
+		} );
+	} );
+	// Link color.
+	wp.customize( 'link_color', function( value ) {
+		$('<style type="text/css" />').attr('id','manuscript-link-color-css').appendTo('body');
+		value.bind( function( to ) {
+			$( '.entry-content a, .comment-content a, .comment-reply-link, .comments-link a' ).css( {
+				'background-color': to
+			} );
+			$( '#manuscript-link-color-css' )
+				.html( 'a:hover, a:focus, a:active, .main-navigation li:hover > a {background-color:' + to + ';}' )
+				.html( '.site-title:hover .background-path {fill:' + to + '}' );
 		} );
 	} );
 } )( jQuery );

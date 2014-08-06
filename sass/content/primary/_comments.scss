@@ -1,5 +1,69 @@
+.comment-list {
+	margin-left: 0;
+	list-style: none;
+	border-bottom: 1px solid $color__border-comments;
+
+	.children {
+		list-style: none;
+	}
+}
+
+.comment {
+	border-top: 1px solid $color__border-comments;
+	padding-top: 22px;
+
+	&:first-child {
+		border-top: none;
+	}
+
+	.avatar {
+		float: left;
+		margin-right: 5px;
+	}
+}
+
+.comment-meta {
+	@include font-size(1.7);
+	font-weight: 100;
+	margin-bottom: 11px;
+
+	.fn {
+		font-weight: normal;
+	}
+	.says {
+		display: none;
+	}
+
+	a {
+		font-weight: normal;
+	}
+}
+
+.comment-reply-link {
+	font-size: 17px;
+	font-weight: normal;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
-.bypostauthor {
+
+.bypostauthor .fn {
+	background: $color__accent;
+	padding: 0 5px 0 3px;
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__link;
+		}
+	}
+}
+
+.form-allowed-tags {
+	font-weight: 100;
+	@include font-size(1.7);
 }

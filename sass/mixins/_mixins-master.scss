@@ -34,3 +34,19 @@
 @mixin clearfix-after() {
     clear: both;
 }
+
+// media-queries
+@mixin breakpoint($point: large) {
+  @if $point == large {
+    @media (max-width: $size__site-main) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 600px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 400px)  { @content; }
+  }
+  @else if $point == min-large {
+    @media (min-width: $size__site-main)  { @content; }
+  }
+}

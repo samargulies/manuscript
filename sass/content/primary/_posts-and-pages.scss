@@ -1,13 +1,27 @@
-.sticky {
+.hentry {
+	margin: 0 0 3em;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
+.sticky {
+	border: 3px dashed $color__accent;
+	padding: 1em;
+	overflow: hidden;
+	margin-left: -1em;
+	margin-right: -1em;
+	@include breakpoint(min-large) {
+		padding: 1em 3em;
+		margin-left: -3em;
+		margin-right: -3em;
+	}
 }
 
 .byline,
 .updated {
 	display: none;
+}
+
+.published {
+	display: inline;
 }
 
 .single .byline,
@@ -24,4 +38,27 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-title,
+.entry-meta {
+	// text-align: center;
+}
+
+.wp-post-image {
+	display: block;
+	margin: 0 auto 1em;
+}
+
+.entry-header,
+.entry-footer {
+	font-weight: 100;
+
+	a {
+		font-weight: normal;
+	}
+}
+
+.entry-footer {
+	@include font-size(1.7);
 }

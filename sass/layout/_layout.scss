@@ -1,0 +1,182 @@
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+.site-header,
+.site-main,
+.site-footer {
+	max-width: $size__site-main;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1em 2em;
+	background: white;
+}
+
+.site-header {
+	padding: 1em;
+}
+
+.site-branding,
+.site-description {
+	margin: 0 0 1.5em;
+}
+
+// .site-title {
+// 	@include font-size(3.8);
+// 	color: $color__text-main;
+// 	margin: 0 0 0 -1em;
+
+// 	a {
+// 		color: inherit;
+// 		font-weight: normal;
+// 		// background: $color__accent;
+// 		margin: 0;
+// 		padding: .1em .3em .15em 1em;
+// 		position: relative;
+// 	}
+
+	// @include breakpoint(min-large) {
+
+	// 	a {
+	// 		padding-left: 1em;
+	// 		padding-right: 1em;
+
+	// 		// This will carve a triangular chunk out of the left of the .site-title
+	// 		&:before {
+	// 			content: "";
+	// 			width: 0;
+	// 			height: 0;
+	// 			position: absolute;
+	// 			top: 0;
+	// 			left: 0;
+	// 			border-top: 80px solid $color__background-body;
+	// 			border-right: 15px solid transparent;
+	// 		}
+	// 		// This will carve a triangular chunk out of the right of the .site-title
+	// 		&:after {
+	// 			content: "";
+	// 			width: 0;
+	// 			height: 0;
+	// 			position: absolute;
+	// 			bottom: 0;
+	// 			right: 0;
+	// 			border-bottom: 80px solid $color__background-body;
+	// 			border-left: 15px solid transparent;
+	// 		}
+	// 	}
+	// }
+// }
+
+.site-title {
+	color: $color__text-main;
+	// margin: 0 0 0 -1.5em;
+	text-align: center;
+
+	a {
+		color: inherit;
+		font-weight: normal;
+		margin: 0;
+		padding: .1em .3em .15em 1em;
+		padding: .1em 1em .15em 1em;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+
+		&:hover {
+			background: none;
+			color: $color__text-main;
+		}
+	}
+
+	.header-background {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.background-path {
+		fill: $color__accent;
+	}
+
+	&:hover .background-path {
+		fill: $color__link-background;
+	}
+
+	@include breakpoint(min-large) {
+		margin-top: -.9em;
+
+		a {
+			// padding-left: 1em;
+			// padding-right: 1em;
+		}
+	}
+}
+
+.site-description {
+	text-align: center;
+	font-weight: normal;
+	font-style: italic;
+	@include font-size(1.9);
+}
+
+@include breakpoint(min-large) {
+	.site-header {
+		margin-top: 1.9em;
+	}
+	.site-footer {
+		margin-top: 2em;
+	}
+}
+
+.site-info {
+	@include font-size(1.7);
+	font-weight: 100;
+	position: relative;
+	z-index: 1;
+
+	a {
+		font-weight: normal;
+	}
+
+	strong {
+		font-weight: normal;
+		background: hsla(38, 100%, 79%, 0.15);
+		padding: .1em .8em .15em .8em;
+		margin-right: -.8em;
+		margin-left: -.8em;
+		position: relative;
+		z-index: -1;
+		transition: .5s ease background-color;
+
+		// This will carve a triangular chunk out of the left of the .site-title
+		&:before {
+			content: "";
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-top: 30px solid white;
+			border-right: 5px solid transparent;
+		}
+		// This will carve a triangular chunk out of the right of the .site-title
+		&:after {
+			content: "";
+			width: 0;
+			height: 0;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-bottom: 30px solid white;
+			border-left: 5px solid transparent;
+		}
+	}
+	
+	&:hover strong {
+		background: hsla(38, 100%, 79%, .5);
+	}
+	
+}
+
