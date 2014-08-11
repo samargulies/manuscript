@@ -41,10 +41,16 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dashed $color__border-abbr;
 	cursor: help;
 	letter-spacing: .1rem;
 	text-transform: uppercase;
+}
+
+a abbr,
+a acronym {
+	border-bottom-color: $color__border-abbr-link;
+	padding-bottom: 1px;
 }
 
 mark, ins {

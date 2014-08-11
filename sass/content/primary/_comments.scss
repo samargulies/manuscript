@@ -33,15 +33,21 @@
 	.says {
 		display: none;
 	}
-
+	
 	a {
 		font-weight: normal;
 	}
 }
 
+ /* comment time / permalink */
+.comment-metadata > a { 
+	border-bottom: none;
+}
+
 .comment-reply-link {
-	font-size: 17px;
+	@include font-size(1.7);
 	font-weight: normal;
+	padding-bottom: 2px;
 }
 
 .comment-content a {
@@ -50,10 +56,10 @@
 
 .bypostauthor .fn {
 	background: $color__accent;
-	padding: 0 5px 0 3px;
 
 	a {
 		color: inherit;
+		border-bottom: none;
 
 		&:hover,
 		&:focus,

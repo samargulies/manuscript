@@ -40,14 +40,13 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-title,
-.entry-meta {
-	// text-align: center;
-}
-
 .wp-post-image {
 	display: block;
 	margin: 0 auto 1em;
+}
+
+.entry-title a {
+	padding-bottom: .25em;
 }
 
 .entry-header,

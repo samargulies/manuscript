@@ -73,8 +73,8 @@
 	a {
 	}
 
-	.current_page_item a,
-	.current-menu-item a {
+	.current_page_item > a,
+	.current-menu-item > a {
 		font-weight: bold;
 	}
 }
@@ -124,4 +124,8 @@
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.page-links a {
+	padding: 0 5px;
 }

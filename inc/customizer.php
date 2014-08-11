@@ -75,14 +75,15 @@ function manuscript_customize_css() {
 	if( '#ffef8b' !== get_theme_mod('link_color') ) {
 		?>
 		<style type="text/css">
+			a {
+				border-bottom-color: <?php echo get_theme_mod('link_color'); ?>;
+			}
+			.entry-content a,
+			.comment-content a,
 			a:hover,
 			a:focus,
 			a:active,
-			.main-navigation li:hover > a,
-			.entry-content a,
-			.comment-content a,
-			.comment-reply-link,
-			.comments-link a {
+			.main-navigation li:hover > a {
 				background-color: <?php echo get_theme_mod('link_color'); ?>;
 			}
 			.site-title:hover .background-path {

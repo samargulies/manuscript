@@ -50,14 +50,15 @@
 	} );
 	// Link color.
 	wp.customize( 'link_color', function( value ) {
-		$('<style type="text/css" />').attr('id','manuscript-link-color-css').appendTo('body');
+		$( '<style type="text/css" />' ).attr( 'id', 'manuscript-link-color-css' ).appendTo( 'body' );
 		value.bind( function( to ) {
-			$( '.entry-content a, .comment-content a, .comment-reply-link, .comments-link a' ).css( {
-				'background-color': to
-			} );
 			$( '#manuscript-link-color-css' )
-				.html( 'a:hover, a:focus, a:active, .main-navigation li:hover > a {background-color:' + to + ';}' )
-				.html( '.site-title:hover .background-path {fill:' + to + '}' );
+				.html(
+					'a { border-bottom-color: ' + to + '; }' +
+					'.entry-content a, .comment-content a { background-color: ' + to + '; }' +
+					'a:hover, a:focus, a:active, .main-navigation li:hover > a { background-color: ' + to + '; }' +
+					'.site-title:hover .background-path { fill: ' + to + '; }' 
+				);
 		} );
 	} );
 } )( jQuery );

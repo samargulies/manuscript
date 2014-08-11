@@ -179,12 +179,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222; }
 
 h1 {
-  font-size: 40px;
-  font-size: 4rem; }
+  font-size: 30px;
+  font-size: 3rem; }
 
 h2 {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: bold; }
 
 h3 {
@@ -209,6 +209,10 @@ h6 {
   letter-spacing: .2rem;
   text-transform: uppercase; }
 
+.site-title {
+  font-size: 40px;
+  font-size: 4rem; }
+
 .page-header {
   margin: 0 0 22px;
   margin: 0 0 2.2rem; }
@@ -226,7 +230,13 @@ h6 {
 .entry-title {
   line-height: 1.3; }
 
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6 {
   margin: 11px 0;
   margin: 1.1rem 0; }
 
@@ -277,10 +287,15 @@ code, kbd, tt, var {
   margin: 0 -5px 0 -3px; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666666;
+  border-bottom: 1px dashed #666666;
   cursor: help;
   letter-spacing: .1rem;
   text-transform: uppercase; }
+
+a abbr,
+a acronym {
+  border-bottom-color: #b3b3b3;
+  padding-bottom: 1px; }
 
 mark, ins {
   background: #d4ff8a;
@@ -397,6 +412,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
+  color: black;
   border-color: #cccccc #cccccc #bbbbbb;
   background: white;
   cursor: pointer;
@@ -598,38 +614,31 @@ body {
 --------------------------------------------------------------*/
 a {
   color: black;
-  text-decoration: none;
-  padding: 0 5px 0 3px;
-  margin: 0 -5px 0 -3px; }
+  border-bottom: 2px solid #ffef8b;
+  text-decoration: none; }
   a:hover, a:focus, a:active {
     background: #ffef8b; }
 
+.site-header a,
+.navigation a {
+  border-bottom-width: 0; }
+
+.entry-footer a {
+  border-bottom-width: 1px; }
+
 .entry-content a,
-.comment-content a,
-.comment-reply-link,
-.comments-link a {
+.comment-content a {
   background: #ffef8b; }
   .entry-content a:hover, .entry-content a:focus, .entry-content a:active,
   .comment-content a:hover,
   .comment-content a:focus,
-  .comment-content a:active,
-  .comment-reply-link:hover,
-  .comment-reply-link:focus,
-  .comment-reply-link:active,
-  .comments-link a:hover,
-  .comments-link a:focus,
-  .comments-link a:active {
+  .comment-content a:active {
     background: none; }
-
-.entry-content a,
-.comment-content a {
-  padding: 0;
-  margin: 0; }
 
 .edit-link a {
-  background: #FFE0EB; }
+  border-bottom-color: #FFA28F; }
   .edit-link a:hover, .edit-link a:focus, .edit-link a:active {
-    background: none; }
+    background: #FFA28F; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -678,8 +687,8 @@ a {
       margin-bottom: 0; }
     .main-navigation li:hover > a {
       background: #ffef8b; }
-  .main-navigation .current_page_item a,
-  .main-navigation .current-menu-item a {
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a {
     font-weight: bold; }
 
 /* Small menu */
@@ -717,6 +726,9 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.page-links a {
+  padding: 0 5px; }
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -849,6 +861,9 @@ a {
   display: block;
   margin: 0 auto 1em; }
 
+.entry-title a {
+  padding-bottom: .25em; }
+
 .entry-header,
 .entry-footer {
   font-weight: 100; }
@@ -898,18 +913,24 @@ a {
   .comment-meta a {
     font-weight: normal; }
 
+/* comment time / permalink */
+.comment-metadata > a {
+  border-bottom: none; }
+
 .comment-reply-link {
   font-size: 17px;
-  font-weight: normal; }
+  font-size: 1.7rem;
+  font-weight: normal;
+  padding-bottom: 2px; }
 
 .comment-content a {
   word-wrap: break-word; }
 
 .bypostauthor .fn {
-  background: #ffd996;
-  padding: 0 5px 0 3px; }
+  background: #ffd996; }
   .bypostauthor .fn a {
-    color: inherit; }
+    color: inherit;
+    border-bottom: none; }
     .bypostauthor .fn a:hover, .bypostauthor .fn a:focus, .bypostauthor .fn a:active {
       color: black; }
 

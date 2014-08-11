@@ -1,23 +1,28 @@
 a {
 	color: $color__link;
+	border-bottom: 2px solid $color__link-background;
 	text-decoration: none;
-	padding: 0 5px 0 3px;
-	margin: 0 -5px 0 -3px;
 
 	&:visited {
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		// color: $color__link-hover;
 		background: $color__link-background;
 	}
 }
 
+.site-header a,
+.navigation a {
+	border-bottom-width: 0;
+}
+
+.entry-footer a {
+	border-bottom-width: 1px;
+}
+
 .entry-content a,
-.comment-content a,
-.comment-reply-link,
-.comments-link a {
+.comment-content a {
 	background: $color__link-background;
 
 	&:hover,
@@ -27,18 +32,12 @@ a {
 	}
 }
 
-.entry-content a,
-.comment-content a {
-	padding: 0;
-	margin: 0;
-}
-
 .edit-link a {
-	background: #FFE0EB;
+	border-bottom-color: #FFA28F;
 
 	&:hover,
 	&:focus,
 	&:active {
-		background: none;
+		background: #FFA28F;
 	}
 }
