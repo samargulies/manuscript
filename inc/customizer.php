@@ -83,7 +83,7 @@ function manuscript_customize_css() {
 			a:hover,
 			a:focus,
 			a:active,
-			.main-navigation li:hover > a {
+			.main-navigation ul ul li:hover > a {
 				background-color: <?php echo get_theme_mod('link_color'); ?>;
 			}
 			.site-title:hover .background-path {

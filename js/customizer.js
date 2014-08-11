@@ -56,7 +56,7 @@
 				.html(
 					'a { border-bottom-color: ' + to + '; }' +
 					'.entry-content a, .comment-content a { background-color: ' + to + '; }' +
-					'a:hover, a:focus, a:active, .main-navigation li:hover > a { background-color: ' + to + '; }' +
+					'a:hover, a:focus, a:active, .main-navigation ul ul li:hover > a { background-color: ' + to + '; }' +
 					'.site-title:hover .background-path { fill: ' + to + '; }' 
 				);
 		} );

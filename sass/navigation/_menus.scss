@@ -8,10 +8,7 @@
 		text-align: center;
 
 		ul {
-			background: white;
-			padding: 10px;
-			margin-left: -10px;
-			border: 1px solid #ededed;
+			padding: .25em 0;
 			@include font-size(1.7);
 			max-width: 300px;
 			min-width: 150px;
@@ -23,21 +20,22 @@
 
 			ul {
 				left: -999em;
-				top: 0;
-				margin-left: 0;
-
-
+				top: -.25em;
 			}
 
 			li {
 				width: 100%;
+				padding: 0 .75em;
 				&:hover > ul {
 					left: 100%;
+				}				
+				&:hover > a {
+					background: $color__link-background;
 				}
 			}
 			
 			a {
-				margin-right: 0;
+				margin: 0;
 			}
 
 			:hover > a {
@@ -48,7 +46,7 @@
 		}
 
 		a {
-			margin-right: 1.25em;
+			margin: 0 .75em;
 			line-height: 1;
 		}
 
@@ -56,6 +54,7 @@
 			left: auto;
 		}
 	}
+
 	li {
 		// float: left;
 		display: inline-block;
@@ -65,12 +64,15 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-
-		&:hover > a {
-			background: $color__link-background;
-		}
 	}
-	a {
+
+				
+	.menu-item-has-children:hover {
+		background: $color__background-menu-hover;
+
+		ul {
+			background: $color__background-menu-hover;
+		}
 	}
 
 	.current_page_item > a,
