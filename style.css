@@ -705,7 +705,7 @@ a {
   .main-navigation ul {
     display: none; }
     .main-navigation ul li {
-      float: none; }
+      display: block; }
     .main-navigation ul a {
       margin-right: 0; } }
 .site-main .comment-navigation,
