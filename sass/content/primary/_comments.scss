@@ -39,15 +39,10 @@
 	}
 }
 
- /* comment time / permalink */
-.comment-metadata > a { 
-	border-bottom: none;
-}
-
 .comment-reply-link {
 	@include font-size(1.7);
 	font-weight: normal;
-	padding-bottom: 2px;
+	padding-bottom: 4px;
 }
 
 .comment-content a {

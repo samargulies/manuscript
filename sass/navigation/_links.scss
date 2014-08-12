@@ -1,6 +1,7 @@
 a {
 	color: $color__link;
-	border-bottom: 2px solid $color__link-background;
+	//border-bottom: 2px solid $color__link-background;
+	box-shadow: inset 0 -2px 0 $color__link-background;
 	text-decoration: none;
 
 	&:visited {
@@ -13,27 +14,44 @@ a {
 }
 
 .site-header a,
-.navigation a {
-	border-bottom-width: 0;
+.navigation a,
+.entry-title a,
+.entry-footer a,
+#wpadminbar a, /* admin bar */
+.widget_archive a,
+.widget_categories a,
+.widget_pages a,
+.widget_tag_cloud a,
+.widget_nav_menu a,
+.comment-metadata > a /* comment time / permalink */ {
+	box-shadow: none;
+}
+
+.entry-title a {
+	box-shadow: inset 0 -.4em 0 $color__link-background;
 }
 
 .entry-footer a {
-	border-bottom-width: 1px;
+	//box-shadow: inset 0 -2px 0 $color__link-background;
+}
+
+.entry-footer .comments-link a {
+	box-shadow: inset 0 -2px 0 $color__link-background;
 }
 
 .entry-content a,
 .comment-content a {
-	background: $color__link-background;
+	box-shadow: inset 0 -5px 0 $color__link-background;
 
 	&:hover,
 	&:focus,
 	&:active {
-		background: none;
+		//background: none;
 	}
 }
 
 .edit-link a {
-	border-bottom-color: #FFA28F;
+	box-shadow: inset 0 -2px 0 #FFA28F;
 
 	&:hover,
 	&:focus,

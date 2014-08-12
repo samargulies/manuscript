@@ -149,12 +149,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222; }
 
 h1 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 26px;
+  font-size: 2.6rem; }
 
 h2 {
-  font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: bold; }
 
 h3 {
@@ -264,8 +264,7 @@ abbr, acronym {
 
 a abbr,
 a acronym {
-  border-bottom-color: #b3b3b3;
-  padding-bottom: 1px; }
+  border-bottom-color: #b3b3b3; }
 
 mark, ins {
   background: #d4ff8a;

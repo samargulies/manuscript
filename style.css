@@ -179,12 +179,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222; }
 
 h1 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 26px;
+  font-size: 2.6rem; }
 
 h2 {
-  font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: bold; }
 
 h3 {
@@ -294,8 +294,7 @@ abbr, acronym {
 
 a abbr,
 a acronym {
-  border-bottom-color: #b3b3b3;
-  padding-bottom: 1px; }
+  border-bottom-color: #b3b3b3; }
 
 mark, ins {
   background: #d4ff8a;
@@ -614,29 +613,36 @@ body {
 --------------------------------------------------------------*/
 a {
   color: black;
-  border-bottom: 2px solid #ffef8b;
+  box-shadow: inset 0 -2px 0 #ffef8b;
   text-decoration: none; }
   a:hover, a:focus, a:active {
     background: #ffef8b; }
 
 .site-header a,
-.navigation a {
-  border-bottom-width: 0; }
+.navigation a,
+.entry-title a,
+.entry-footer a,
+#wpadminbar a,
+.widget_archive a,
+.widget_categories a,
+.widget_pages a,
+.widget_tag_cloud a,
+.widget_nav_menu a,
+.comment-metadata > a {
+  box-shadow: none; }
 
-.entry-footer a {
-  border-bottom-width: 1px; }
+.entry-title a {
+  box-shadow: inset 0 -0.4em 0 #ffef8b; }
+
+.entry-footer .comments-link a {
+  box-shadow: inset 0 -2px 0 #ffef8b; }
 
 .entry-content a,
 .comment-content a {
-  background: #ffef8b; }
-  .entry-content a:hover, .entry-content a:focus, .entry-content a:active,
-  .comment-content a:hover,
-  .comment-content a:focus,
-  .comment-content a:active {
-    background: none; }
+  box-shadow: inset 0 -5px 0 #ffef8b; }
 
 .edit-link a {
-  border-bottom-color: #FFA28F; }
+  box-shadow: inset 0 -2px 0 #FFA28F; }
   .edit-link a:hover, .edit-link a:focus, .edit-link a:active {
     background: #FFA28F; }
 
@@ -708,7 +714,9 @@ a {
     .main-navigation ul li {
       display: block; }
     .main-navigation ul a {
-      margin-right: 0; } }
+      margin-right: 0; }
+    .main-navigation ul .menu-item-has-children:hover {
+      background: transparent; } }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -862,9 +870,6 @@ a {
   display: block;
   margin: 0 auto 1em; }
 
-.entry-title a {
-  padding-bottom: .25em; }
-
 .entry-header,
 .entry-footer {
   font-weight: 100; }
@@ -914,15 +919,11 @@ a {
   .comment-meta a {
     font-weight: normal; }
 
-/* comment time / permalink */
-.comment-metadata > a {
-  border-bottom: none; }
-
 .comment-reply-link {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: normal;
-  padding-bottom: 2px; }
+  padding-bottom: 4px; }
 
 .comment-content a {
   word-wrap: break-word; }
