@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<?php get_sidebar( 'footer' ); ?>
+		<?php get_sidebar(); ?>
 
 		<div class="site-info">
 			<?php printf( __( '%1$s: A WordPress theme by %2$s.', 'manuscript' ), '<strong>Manuscript</strong>', '<a href="http://www.belabor.org/" rel="designer">Sam Margulies</a>' ); ?>
