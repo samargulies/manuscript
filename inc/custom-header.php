@@ -1,16 +1,7 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
+ * Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
- *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-
  *
  * @package Manuscript
  */
@@ -25,7 +16,7 @@
 function manuscript_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'manuscript_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => '404040',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
@@ -84,24 +75,94 @@ if ( ! function_exists( 'manuscript_admin_header_style' ) ) :
  * @see manuscript_custom_header_setup().
  */
 function manuscript_admin_header_style() {
-?>
+	?>
 	<style type="text/css">
-		.appearance_page_custom-header #headimg {
+
+		@font-face {
+		    font-family: 'LatinModernMono';
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.eot');
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.woff') format('woff'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.ttf') format('truetype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.svg#LatinModernMono10Regular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		@font-face {
+		    font-family: 'LatinModernMono';
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.eot');
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.woff') format('woff'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.ttf') format('truetype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.svg#LatinModernMono10Italic') format('svg');
+		    font-weight: normal;
+		    font-style: italic;
+		}
+		.admin-header-preview {
+			font-size: 19px;
+			font-family: "LatinModernMono", "Courier New", courier, monospace;
+			line-height: 1.5;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 1em;
+			background: white;
+		}
+		.admin-header-preview img {
 			border: none;
+			max-width: 100%;
+			height: auto;
 		}
-		#headimg h1,
-		#desc {
+		.site-title {
+			text-align: center;
+			font-size: 40px;
+			margin: 0;
 		}
-		#headimg h1 {
+		.site-title a {
+			text-decoration: none;
+			color: inherit;
+			font-weight: normal;
+			margin: 0;
+			padding: .1em .3em .15em 1em;
+			padding: .1em 1em .15em 1em;
+			display: inline-block;
+			position: relative;
+			z-index: 1;
 		}
-		#headimg h1 a {
+
+		.site-title a:hover {
+			color: #404040;
 		}
-		#desc {
+
+		.site-title .header-background {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
 		}
-		#headimg img {
+
+		h2.site-description {
+			text-align: center;
+			font-weight: normal;
+			font-style: italic;
+			font-size: 19px;
+			margin: 0 0 1.5em;
+			padding: 0;
+			line-height: 1.5;
 		}
+
+		@media (min-width: 800px) {
+			.site-header {
+				margin-top: 1.9em;
+			}
+			.site-title {
+				margin-top: -.9em;
+			}
+		}
+
 	</style>
-<?php
+	<?php
 }
 endif; // manuscript_admin_header_style
 
@@ -112,15 +173,29 @@ if ( ! function_exists( 'manuscript_admin_header_image' ) ) :
  * @see manuscript_custom_header_setup().
  */
 function manuscript_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+	manuscript_header_style();
+	manuscript_customize_css( true );
+	?>
+	<header id="masthead" class="site-header admin-header-preview" role="banner">
+	<div class="site-branding">
+		<h1 class="site-title">
+			<a rel="home" onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<span><?php bloginfo( 'name' ); ?></span>
+				<svg class="header-background" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 481 116" preserveAspectRatio="none" version="1.1"><path class="background-path" d="M16 0L0 116 465 116 481 0 16 0Z" fill="#FFD996"></path></svg>
+			</a>
+		</h1>
+		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+
 		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
+			<div class="site-header-image"
+				<a onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+				</a>
+			</div><!-- .site-header-image -->
+		<?php endif; // End header image check. ?>
+
 	</div>
-<?php
+	</header>
+	<?php
 }
 endif; // manuscript_admin_header_image

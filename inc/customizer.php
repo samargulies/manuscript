@@ -54,7 +54,7 @@ add_action( 'customize_preview_init', 'manuscript_customize_preview_js' );
 /**
  * Print CSS from customizer
  */
-function manuscript_customize_css() {
+function manuscript_customize_css( $is_header_preview = false ) {
 	// Accent Color
 	if( '#ffd996' !== get_theme_mod('accent_color') ) {
 		?>
@@ -75,17 +75,28 @@ function manuscript_customize_css() {
 	if( '#ffef8b' !== get_theme_mod('link_color') ) {
 		?>
 		<style type="text/css">
-			a {
-				border-bottom-color: <?php echo get_theme_mod('link_color'); ?>;
+			<?php if( $is_header_preview === false ) { ?>
+
+			a, .entry-footer .comments-link a {
+				box-shadow: inset 0 -2px 0 <?php echo get_theme_mod('link_color'); ?>;
+			}
+			.entry-title a {
+				box-shadow: inset 0 -.4em 0 <?php echo get_theme_mod('link_color'); ?>;
 			}
 			.entry-content a,
-			.comment-content a,
+			.comment-content a {
+				box-shadow: inset 0 -5px 0 <?php echo get_theme_mod('link_color'); ?>;
+			}
 			a:hover,
 			a:focus,
 			a:active,
-			.main-navigation ul ul li:hover > a {
+			.main-navigation ul ul li:hover > a,
+			.page-links a {
 				background-color: <?php echo get_theme_mod('link_color'); ?>;
 			}
+
+			<?php } ?>
+
 			.site-title:hover .background-path {
 				fill: <?php echo get_theme_mod('link_color'); ?>;
 			}
