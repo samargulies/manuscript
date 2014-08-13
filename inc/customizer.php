@@ -54,7 +54,7 @@ add_action( 'customize_preview_init', 'manuscript_customize_preview_js' );
 /**
  * Print CSS from customizer
  */
-function manuscript_customize_css( $is_header_preview = false ) {
+function manuscript_customize_css( $is_header_preview ) {
 	// Accent Color
 	if( '#ffd996' !== get_theme_mod('accent_color') ) {
 		?>
@@ -75,7 +75,7 @@ function manuscript_customize_css( $is_header_preview = false ) {
 	if( '#ffef8b' !== get_theme_mod('link_color') ) {
 		?>
 		<style type="text/css">
-			<?php if( $is_header_preview === false ) { ?>
+			<?php if( $is_header_preview !== true ) { ?>
 
 			a, .entry-footer .comments-link a {
 				box-shadow: inset 0 -2px 0 <?php echo get_theme_mod('link_color'); ?>;
