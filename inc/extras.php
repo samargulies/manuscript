@@ -87,3 +87,33 @@ function manuscript_setup_author() {
 	}
 }
 add_action( 'wp', 'manuscript_setup_author' );
+
+
+/**
+ * Filter images to add class to featured images if they are full-sized
+ *
+ * @param mixed $attr Optional, attributes for the image markup.
+ * @param mixed $attachment Image attachment object.
+ * @global $content_width
+ * @return string The filtered attributes.
+ */
+function manuscript_post_thumbnail_classes( $attr, $attachment ) {
+
+	// find featured images
+	if( $attr['class'] === 'attachment-post-thumbnail' ) {
+
+		$thumbnail = wp_get_attachment_image_src( $attachment->ID, 'post-thumbnail' );
+
+		// get the width of the image
+		$thumbnail_width = $thumbnail[1];
+
+		if( $thumbnail_width === 800 ) {
+			$attr['class'] .= ' full-size-post-thumbnail'; 
+		}
+	}
+	
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'manuscript_post_thumbnail_classes', 10, 2 );
+
+

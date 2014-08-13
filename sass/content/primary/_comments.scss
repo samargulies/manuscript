@@ -68,3 +68,7 @@
 	font-weight: 100;
 	@include font-size(1.7);
 }
+
+.comment-form .required {
+	color: #E62600;
+}

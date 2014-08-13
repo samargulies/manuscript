@@ -1,4 +1,5 @@
 .widget {
+	@include font-size(1.7);
 	margin: 0 0 1.5em;
 
 	/* Make sure select elements fit in widgets */
@@ -10,4 +11,115 @@
 /* Search widget */
 .widget_search .search-submit {
 	// display: none;
+}
+
+// TODO: Add better styles for hierarchical lists
+// .widget ul {
+//     margin-left: 0;
+//     list-style: none;
+// }
+// .widget ul ul {
+//     margin-left: 1.5em;
+//     list-style: disc;
+//     border-top: 1px solid #eee;
+// }
+// .widget li {
+//     border-top: 1px solid #eee;
+//     margin-top: 5px;
+// }
+// .widget li:first-child {
+//     border-top: none;
+// }
+
+.widget_meta, 
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_archive {
+	ul {
+		list-style: none;
+		margin-left: 0;
+	}
+	li {
+		margin-top: 5px;
+	}
+}
+
+.widget_recent_entries {
+	.post-date {
+		font-weight: 100;
+	}
+	a {
+		@include font-size(1.9);
+	}
+}
+
+.widget_archive,
+.widget_recent_comments,
+.widget_categories {
+	font-weight: 100;
+	a {
+		font-weight: normal;
+	}
+}
+
+.widget_recent_comments {
+	a, .comment-author-link{
+		font-weight: normal;
+		@include font-size(1.9);
+	}
+	li a:first-child {
+		box-shadow: none;
+	}
+}
+
+.widget_tag_cloud {
+	.tagcloud a {
+		font-weight: 100;
+	}
+}
+
+.widget_calendar {
+	table {
+		max-width: 400px;
+	}
+	thead, tbody {
+		@include font-size(1.9);
+	}
+	tfoot a { /* next / prev links */
+		box-shadow: none;
+	}
+	#next { /* next link */
+		text-align: right;
+	}
+}
+
+.widget_rss {
+	ul {
+		list-style: none;
+		margin-left: 0;
+	}
+	li {
+		margin: 11px 0 22px;
+		margin: 1.1rem 0 2.2rem;
+	}
+	.rsswidget img { /* rss icon */
+	    vertical-align: baseline;
+	}
+	.widget-title a.rsswidget:first-child:hover { /* rss icon hover */
+	    background: none;
+	}
+	.widget-title a.rsswidget { /* widget title */
+	    box-shadow: none;
+	}
+	li > a.rsswidget {  /* rss item title */
+	    @include font-size(2.2);
+	}
+	span.rss-date {
+	    display: block;
+	}
+
+	.rssSummary {
+		margin: 11px 0;
+		margin: 1.1rem 0;
+	}
 }

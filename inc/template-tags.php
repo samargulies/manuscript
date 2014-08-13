@@ -52,9 +52,26 @@ function manuscript_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'manuscript' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'manuscript' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'manuscript' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav"><</span>&nbsp;%title', 'Previous post link', 'manuscript' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">></span>', 'Next post link',     'manuscript' ) );
 			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'manuscript_attachment_nav' ) ) :
+/**
+ * Display navigation to next/previous attachment when applicable.
+ */
+function manuscript_attachment_nav() {
+	?>
+	<nav class="navigation attachment-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Image navigation', 'manuscript' ); ?></h1>
+		<div class="nav-links">
+			<div class="nav-previous"><?php previous_image_link(); ?></div>
+			<div class="nav-next"> <?php next_image_link(); ?></div>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php

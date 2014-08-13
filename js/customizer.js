@@ -54,10 +54,11 @@
 		value.bind( function( to ) {
 			$( '#manuscript-link-color-css' )
 				.html(
-					'a { border-bottom-color: ' + to + '; }' +
-					'.entry-content a, .comment-content a { background-color: ' + to + '; }' +
-					'a:hover, a:focus, a:active, .main-navigation ul ul li:hover > a { background-color: ' + to + '; }' +
-					'.site-title:hover .background-path { fill: ' + to + '; }' 
+					'a, .entry-footer .comments-link a { box-shadow: inset 0 -2px 0 ' + to + '; }' +
+					'.entry-title a { box-shadow: inset 0 -.4em 0 ' + to + '; }' +
+					'.entry-content a, .comment-content a { box-shadow: inset 0 -5px 0 ' + to + '; }' +
+					'a:hover, a:focus, a:active, .main-navigation ul ul li:hover > a, .page-links a { background-color: ' + to + '; }' + 
+					'.site-title:hover .background-path { fill: ' + to + '; }'
 				);
 		} );
 	} );

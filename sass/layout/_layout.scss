@@ -133,50 +133,9 @@ body {
 .site-info {
 	@include font-size(1.7);
 	font-weight: 100;
-	position: relative;
-	z-index: 1;
 
-	a {
+	a, strong {
 		font-weight: normal;
-	}
-
-	strong {
-		font-weight: normal;
-		background: hsla(38, 100%, 79%, 0.15);
-		padding: .1em .8em .15em .8em;
-		margin-right: -.8em;
-		margin-left: -.8em;
-		position: relative;
-		z-index: -1;
-		transition: .5s ease background-color;
-
-		// This will carve a triangular chunk out of the left of the .site-title
-		&:before {
-			content: "";
-			width: 0;
-			height: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			border-top: 30px solid white;
-			border-right: 5px solid transparent;
-		}
-		// This will carve a triangular chunk out of the right of the .site-title
-		&:after {
-			content: "";
-			width: 0;
-			height: 0;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			border-bottom: 30px solid white;
-			border-left: 5px solid transparent;
-		}
-	}
-	
-	&:hover strong {
-		background: hsla(38, 100%, 79%, .5);
-	}
-	
+	}	
 }
 

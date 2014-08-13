@@ -350,7 +350,8 @@ table th, table td {
   padding: 1.1rem .8rem; }
 
 table th {
-  border-left: 1px solid #eaecee; }
+  border-left: 1px solid #eaecee;
+  font-weight: bold; }
 
 table td {
   border-top: 1px solid #eaecee;
@@ -396,6 +397,10 @@ iframe,
 object {
   max-width: 100%; }
 
+@media (min-width: 800px) {
+  img.full-size-post-thumbnail {
+    max-width: 800px;
+    margin-left: -2em; } }
 /*--------------------------------------------------------------
 12.1 Captions
 --------------------------------------------------------------*/
