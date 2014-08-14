@@ -9,10 +9,17 @@ body {
 	margin: 0 auto;
 	padding: 1em 2em;
 	background: white;
+
+	@include breakpoint(medium) {
+		padding: 1em;
+	}
 }
 
 .site-header {
 	padding: 1em;
+	@include breakpoint(medium) {
+		padding-bottom: 0;
+	}
 }
 
 .site-branding,
@@ -68,8 +75,11 @@ body {
 
 .site-title {
 	color: $color__text-main;
-	// margin: 0 0 0 -1.5em;
 	text-align: center;
+
+	@include breakpoint(medium) {
+		@include font-size(2.8);
+	}
 
 	a {
 		color: inherit;

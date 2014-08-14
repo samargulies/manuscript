@@ -7,6 +7,10 @@ textarea {
 	font-family: $font__main;
 	@include font-size(1.9);
 	line-height: $font__line-height-body;
+
+	@include breakpoint(medium) {
+		@include font-size(1.7);
+	}
 }
 
 @import "fonts";

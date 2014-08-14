@@ -17,8 +17,8 @@ function manuscript_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'manuscript_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '404040',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 762,
+		'height'                 => 140,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'manuscript_header_style',
 		'admin-head-callback'    => 'manuscript_admin_header_style',
@@ -160,7 +160,12 @@ function manuscript_admin_header_style() {
 				margin-top: -.9em;
 			}
 		}
-
+		@media (max-width: 600px) {
+			.site-title {
+				font-size: 28px;
+				font-size: 2.8rem;
+			}
+		}
 	</style>
 	<?php
 }

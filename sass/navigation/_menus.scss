@@ -98,7 +98,7 @@
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+@include breakpoint(medium) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -131,12 +131,14 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+		padding-right: 5px;
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+		padding-left: 5px;
 	}
 
 }
