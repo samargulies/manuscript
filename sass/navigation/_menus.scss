@@ -61,7 +61,8 @@
 		position: relative;
 		margin-bottom: 5px;
 
-		.menu-item-has-children:after {
+		.menu-item-has-children:after,
+		.page_item_has_children:after {
 			content: ">";
 			display: block;
 			position: absolute;
@@ -76,7 +77,8 @@
 	}
 
 				
-	.menu-item-has-children:hover {
+	.menu-item-has-children:hover,
+	.page_item_has_children:hover {
 		background: $color__background-menu-hover;
 		//box-shadow: -3px 3px #E8E8E8;
 
@@ -115,7 +117,8 @@
 		a {
 			margin-right: 0;
 		}
-		.menu-item-has-children:hover {
+		.menu-item-has-children:hover,
+		.page_item_has_children:hover {
 			background: transparent;
 		}
 	}
