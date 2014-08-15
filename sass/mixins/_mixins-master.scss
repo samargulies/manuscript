@@ -49,4 +49,7 @@
   @else if $point == min-large {
     @media (min-width: $size__site-main)  { @content; }
   }
+  @else if $point == min-medium {
+    @media (min-width: 600px) { @content; }
+  }
 }

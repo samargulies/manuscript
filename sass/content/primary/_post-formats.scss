@@ -1,0 +1,37 @@
+.blog ,
+.archive {
+	.format-aside,
+	.format-status,
+	.format-video,
+	.format-audio,
+	.format-image,
+	.format-link,
+	.format-quote {
+		.wp-post-image,
+		.entry-title,
+		.cat-links,
+		.tag-links {
+			display: none;
+		}
+	}
+}
+
+.post-format-link {
+	.genericon {
+		line-height: $font__line-height-body;
+	}
+
+	a:hover,
+	a:focus,
+	a:active {
+		background: none;
+		color: $color__link-background;
+	}
+}
+
+.format-aside .entry-content,
+.format-status .entry-content,
+.format-link .entry-content,
+.format-quote .entry-content {
+	font-size: 1.1em;
+}

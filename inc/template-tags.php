@@ -22,11 +22,11 @@ function manuscript_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'manuscript' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav"><</span> Older posts', 'manuscript' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'manuscript' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">></span>', 'manuscript' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -127,6 +127,21 @@ if ( ! function_exists( 'manuscript_posted_with_categorization' ) ) :
 /**
  * Prints HTML with category and tag information.
  */
+function manuscript_posted_with_format() {
+	if( has_post_format() ) {
+		$format = get_post_format();
+		?>
+		<span class="post-format-link">
+			<a href="<?php echo get_post_format_link( $format ); ?>" title="<?php esc_attr( printf( __( '%1$s posts', 'manuscript' ), get_post_format_string( $format ) ) ); ?>">
+			<span class="genericon genericon-<?php echo $format; ?>"></span></a>
+		</span>
+		<?php
+	}
+}
+
+/**
+ * Prints HTML with category and tag information.
+ */
 function manuscript_posted_with_categorization() {
 
 	/* translators: used between list items, there is a space after the comma */
@@ -142,7 +157,7 @@ function manuscript_posted_with_categorization() {
 	$tags_list = get_the_tag_list( '', __( ', ', 'manuscript' ) );
 	if ( $tags_list ) :
 		?>
-		<span class="tags-links">
+		<span class="tag-links">
 			<?php printf( __( 'Tags: %1$s', 'manuscript' ), $tags_list ); ?>
 		</span>
 	<?php 

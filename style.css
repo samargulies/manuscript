@@ -147,38 +147,38 @@ textarea {
 
 @font-face {
   font-family: 'LatinModernMono';
-  src: url("fonts/lmmono10-regular-webfont.eot");
-  src: url("fonts/lmmono10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lmmono10-regular-webfont.woff") format("woff"), url("fonts/lmmono10-regular-webfont.ttf") format("truetype"), url("fonts/lmmono10-regular-webfont.svg#LatinModernMono10Regular") format("svg");
+  src: url("fonts/latin-modern-mono/lmmono10-regular-webfont.eot");
+  src: url("fonts/latin-modern-mono/lmmono10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latin-modern-mono/lmmono10-regular-webfont.woff") format("woff"), url("fonts/latin-modern-mono/lmmono10-regular-webfont.ttf") format("truetype"), url("fonts/latin-modern-mono/lmmono10-regular-webfont.svg#LatinModernMono10Regular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'LatinModernMono';
-  src: url("fonts/lmmono10-italic-webfont.eot");
-  src: url("fonts/lmmono10-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lmmono10-italic-webfont.woff") format("woff"), url("fonts/lmmono10-italic-webfont.ttf") format("truetype"), url("fonts/lmmono10-italic-webfont.svg#LatinModernMono10Italic") format("svg");
+  src: url("fonts/latin-modern-mono/lmmono10-italic-webfont.eot");
+  src: url("fonts/latin-modern-mono/lmmono10-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latin-modern-mono/lmmono10-italic-webfont.woff") format("woff"), url("fonts/latin-modern-mono/lmmono10-italic-webfont.ttf") format("truetype"), url("fonts/latin-modern-mono/lmmono10-italic-webfont.svg#LatinModernMono10Italic") format("svg");
   font-weight: normal;
   font-style: italic; }
 @font-face {
   font-family: 'LatinModernMono';
-  src: url("fonts/lmmonolt10-regular-webfont.eot");
-  src: url("fonts/lmmonolt10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lmmonolt10-regular-webfont.woff") format("woff"), url("fonts/lmmonolt10-regular-webfont.ttf") format("truetype"), url("fonts/lmmonolt10-regular-webfont.svg#LatinModernMonoLight10Regular") format("svg");
+  src: url("fonts/latin-modern-mono/lmmonolt10-regular-webfont.eot");
+  src: url("fonts/latin-modern-mono/lmmonolt10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latin-modern-mono/lmmonolt10-regular-webfont.woff") format("woff"), url("fonts/latin-modern-mono/lmmonolt10-regular-webfont.ttf") format("truetype"), url("fonts/latin-modern-mono/lmmonolt10-regular-webfont.svg#LatinModernMonoLight10Regular") format("svg");
   font-weight: 100;
   font-style: normal; }
 @font-face {
   font-family: 'LatinModernMono';
-  src: url("fonts/lmmonolt10-oblique-webfont.eot");
-  src: url("fonts/lmmonolt10-oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lmmonolt10-oblique-webfont.woff") format("woff"), url("fonts/lmmonolt10-oblique-webfont.ttf") format("truetype"), url("fonts/lmmonolt10-oblique-webfont.svg#LatinModernMonoLight10Oblique") format("svg");
+  src: url("fonts/latin-modern-mono/lmmonolt10-oblique-webfont.eot");
+  src: url("fonts/latin-modern-mono/lmmonolt10-oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latin-modern-mono/lmmonolt10-oblique-webfont.woff") format("woff"), url("fonts/latin-modern-mono/lmmonolt10-oblique-webfont.ttf") format("truetype"), url("fonts/latin-modern-mono/lmmonolt10-oblique-webfont.svg#LatinModernMonoLight10Oblique") format("svg");
   font-weight: 100;
   font-style: italic; }
 @font-face {
   font-family: 'LatinModernMono';
-  src: url("fonts/lmmonolt10-bold-webfont.eot");
-  src: url("fonts/lmmonolt10-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lmmonolt10-bold-webfont.woff") format("woff"), url("fonts/lmmonolt10-bold-webfont.ttf") format("truetype"), url("fonts/lmmonolt10-bold-webfont.svg#LatinModernMonoLight10Bold") format("svg");
+  src: url("fonts/latin-modern-mono/lmmonolt10-bold-webfont.eot");
+  src: url("fonts/latin-modern-mono/lmmonolt10-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latin-modern-mono/lmmonolt10-bold-webfont.woff") format("woff"), url("fonts/latin-modern-mono/lmmonolt10-bold-webfont.ttf") format("truetype"), url("fonts/latin-modern-mono/lmmonolt10-bold-webfont.svg#LatinModernMonoLight10Bold") format("svg");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'LatinModernMono';
-  src: url("fonts/lmmonolt10-boldoblique-webfont.eot");
-  src: url("fonts/lmmonolt10-boldoblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/lmmonolt10-boldoblique-webfont.woff") format("woff"), url("fonts/lmmonolt10-boldoblique-webfont.ttf") format("truetype"), url("fonts/lmmonolt10-boldoblique-webfont.svg#LatinModernMonoLight10BdOb") format("svg");
+  src: url("fonts/latin-modern-mono/lmmonolt10-boldoblique-webfont.eot");
+  src: url("fonts/latin-modern-mono/lmmonolt10-boldoblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latin-modern-mono/lmmonolt10-boldoblique-webfont.woff") format("woff"), url("fonts/latin-modern-mono/lmmonolt10-boldoblique-webfont.ttf") format("truetype"), url("fonts/latin-modern-mono/lmmonolt10-boldoblique-webfont.svg#LatinModernMonoLight10BdOb") format("svg");
   font-weight: bold;
   font-style: italic; }
 h1, h2, h3, h4, h5, h6 {
@@ -557,7 +557,7 @@ body {
     display: inline-block;
     position: relative;
     z-index: 1; }
-    .site-title a:hover {
+    .site-title a:hover, .site-title a:focus, .site-title a:active {
       background: none;
       color: #404040; }
   .site-title .header-background {
@@ -992,11 +992,79 @@ a {
   font-size: 1.7rem; }
 
 /*--------------------------------------------------------------
-10.2 Asides
+10.2 Post Formats
 --------------------------------------------------------------*/
+.blog .format-aside .wp-post-image,
 .blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
+.blog .format-aside .cat-links,
+.blog .format-aside .tag-links,
+.blog .format-status .wp-post-image,
+.blog .format-status .entry-title,
+.blog .format-status .cat-links,
+.blog .format-status .tag-links,
+.blog .format-video .wp-post-image,
+.blog .format-video .entry-title,
+.blog .format-video .cat-links,
+.blog .format-video .tag-links,
+.blog .format-audio .wp-post-image,
+.blog .format-audio .entry-title,
+.blog .format-audio .cat-links,
+.blog .format-audio .tag-links,
+.blog .format-image .wp-post-image,
+.blog .format-image .entry-title,
+.blog .format-image .cat-links,
+.blog .format-image .tag-links,
+.blog .format-link .wp-post-image,
+.blog .format-link .entry-title,
+.blog .format-link .cat-links,
+.blog .format-link .tag-links,
+.blog .format-quote .wp-post-image,
+.blog .format-quote .entry-title,
+.blog .format-quote .cat-links,
+.blog .format-quote .tag-links,
+.archive .format-aside .wp-post-image,
+.archive .format-aside .entry-title,
+.archive .format-aside .cat-links,
+.archive .format-aside .tag-links,
+.archive .format-status .wp-post-image,
+.archive .format-status .entry-title,
+.archive .format-status .cat-links,
+.archive .format-status .tag-links,
+.archive .format-video .wp-post-image,
+.archive .format-video .entry-title,
+.archive .format-video .cat-links,
+.archive .format-video .tag-links,
+.archive .format-audio .wp-post-image,
+.archive .format-audio .entry-title,
+.archive .format-audio .cat-links,
+.archive .format-audio .tag-links,
+.archive .format-image .wp-post-image,
+.archive .format-image .entry-title,
+.archive .format-image .cat-links,
+.archive .format-image .tag-links,
+.archive .format-link .wp-post-image,
+.archive .format-link .entry-title,
+.archive .format-link .cat-links,
+.archive .format-link .tag-links,
+.archive .format-quote .wp-post-image,
+.archive .format-quote .entry-title,
+.archive .format-quote .cat-links,
+.archive .format-quote .tag-links {
   display: none; }
+
+.post-format-link .genericon {
+  line-height: 1.5; }
+.post-format-link a:hover,
+.post-format-link a:focus,
+.post-format-link a:active {
+  background: none;
+  color: #ffef8b; }
+
+.format-aside .entry-content,
+.format-status .entry-content,
+.format-link .entry-content,
+.format-quote .entry-content {
+  font-size: 1.1em; }
 
 /*--------------------------------------------------------------
 10.3 Comments
@@ -1078,16 +1146,28 @@ a {
   margin-top: 0;
   padding: 0; }
 
+.entry-content .wp-audio-shortcode,
+.entry-content div.video-player {
+  margin-bottom: 22px;
+  margin-bottom: 2.2rem; }
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
   max-width: 100%; }
 
-@media (min-width: 800px) {
-  img.full-size-post-thumbnail {
-    max-width: 800px;
-    margin-left: -2em; } }
+img.full-size-post-thumbnail {
+  position: relative;
+  left: -1em;
+  right: -1em;
+  max-width: calc(100% + 2em ); }
+  @media (min-width: 600px) {
+    img.full-size-post-thumbnail {
+      left: -2em;
+      right: -2em;
+      max-width: calc(100% + 4em ); } }
+
 /*--------------------------------------------------------------
 12.1 Captions
 --------------------------------------------------------------*/

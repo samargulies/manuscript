@@ -80,21 +80,21 @@ function manuscript_admin_header_style() {
 
 		@font-face {
 		    font-family: 'LatinModernMono';
-		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.eot');
-		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.woff') format('woff'),
-		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.ttf') format('truetype'),
-		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-regular-webfont.svg#LatinModernMono10Regular') format('svg');
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-regular-webfont.eot');
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-regular-webfont.woff') format('woff'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-regular-webfont.ttf') format('truetype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-regular-webfont.svg#LatinModernMono10Regular') format('svg');
 		    font-weight: normal;
 		    font-style: normal;
 		}
 		@font-face {
 		    font-family: 'LatinModernMono';
-		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.eot');
-		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.woff') format('woff'),
-		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.ttf') format('truetype'),
-		         url('<?php echo get_template_directory_uri(); ?>/fonts/lmmono10-italic-webfont.svg#LatinModernMono10Italic') format('svg');
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-italic-webfont.eot');
+		    src: url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-italic-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-italic-webfont.woff') format('woff'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-italic-webfont.ttf') format('truetype'),
+		         url('<?php echo get_template_directory_uri(); ?>/fonts/latin-modern-mono/lmmono10-italic-webfont.svg#LatinModernMono10Italic') format('svg');
 		    font-weight: normal;
 		    font-style: italic;
 		}
@@ -122,7 +122,6 @@ function manuscript_admin_header_style() {
 			color: inherit;
 			font-weight: normal;
 			margin: 0;
-			padding: .1em .3em .15em 1em;
 			padding: .1em 1em .15em 1em;
 			display: inline-block;
 			position: relative;
@@ -163,7 +162,6 @@ function manuscript_admin_header_style() {
 		@media (max-width: 600px) {
 			.site-title {
 				font-size: 28px;
-				font-size: 2.8rem;
 			}
 		}
 	</style>

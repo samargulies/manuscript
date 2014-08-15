@@ -17,7 +17,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'manuscript' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">></span>', 'manuscript' ) ); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'manuscript' ),
@@ -28,6 +28,7 @@
 
 	<footer class="entry-footer">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php manuscript_posted_with_format(); ?>
 			<span class="entry-author">
 				<?php manuscript_posted_by(); ?>
 			</span><!-- .entry-author -->

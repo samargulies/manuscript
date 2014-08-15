@@ -95,6 +95,11 @@ function manuscript_customize_css( $is_header_preview ) {
 				background-color: <?php echo get_theme_mod('link_color'); ?>;
 			}
 
+			.post-format-link a:hover,
+			.post-format-link a:focus,
+			.post-format-link a:active {
+				color: <?php echo get_theme_mod('link_color'); ?>;
+			}
 			<?php } ?>
 
 			.site-title:hover .background-path {

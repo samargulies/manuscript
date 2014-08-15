@@ -91,7 +91,9 @@ body {
 		position: relative;
 		z-index: 1;
 
-		&:hover {
+		&:hover,
+		&:focus,
+		&:active {
 			background: none;
 			color: $color__text-main;
 		}

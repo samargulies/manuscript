@@ -7,17 +7,29 @@
 	padding: 0;
 }
 
+.entry-content .wp-audio-shortcode,
+.entry-content div.video-player {
+	margin-bottom: 22px;
+	margin-bottom: 2.2rem;
+}
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
-object {
+object{
 	max-width: 100%;
 }
 
-@include breakpoint(min-large) {
-	img.full-size-post-thumbnail {
-		max-width: $size__site-main;
-		margin-left: -2em;
+img.full-size-post-thumbnail {
+	position: relative;
+	left: -1em;
+	right: -1em;
+	max-width: calc( 100% + 2em );
+	
+	@include breakpoint(min-medium) {
+		left: -2em;	
+		right: -2em;
+		max-width: calc( 100% + 4em );
 	}
 }
 
