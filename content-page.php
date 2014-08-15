@@ -12,7 +12,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_attachment_link(); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -23,9 +22,5 @@
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', 'manuscript' ), '<span class="edit-link">', '</span>' ); ?>
-		<nav id="image-navigation" class="navigation" role="navigation">
-			<span class="previous-image"><?php previous_image_link( false, __( '< Previous', 'manuscript' ) ); ?></span>
-			<span class="next-image"><?php next_image_link( false, __( 'Next >', 'manuscript' ) ); ?></span>
-		</nav><!-- #image-navigation -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
