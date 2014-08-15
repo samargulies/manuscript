@@ -17,7 +17,7 @@
 }
 
 .byline,
-.updated {
+.updated:not(.published) {
 	display: none;
 }
 
@@ -55,6 +55,34 @@
 	}
 }
 
+.entry-title a { 
+	padding-left: 10px;
+	margin-left: -10px;
+ }
+
+@include breakpoint(min-medium) {
+	.has-post-thumbnail .entry-title {
+	    position: relative;
+	    margin-top: -2.5em;
+	    margin-left: -5px;
+		margin-right: -5px;
+	    padding-bottom: .5em;
+	    padding-top: .25em;
+	    background: white;
+
+		a {
+			padding: 0 15px;
+		}
+	}
+
+	.single .has-post-thumbnail .entry-title {
+		padding-left: 10px;
+		padding-right: 10px;
+	    margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+	
 .entry-footer {
 	@include font-size(1.7);
 }

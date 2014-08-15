@@ -59,7 +59,7 @@
 					'.entry-content a, .comment-content a { box-shadow: inset 0 -5px 0 ' + to + '; }' +
 					'a:hover, a:focus, a:active, .main-navigation ul ul li:hover > a, .page-links a { background-color: ' + to + '; }' + 
 					'.site-title:hover .background-path { fill: ' + to + '; }' +
-					'.format-link a:hover, .format-link a:focus, .format-link a:active { color: ' + to + '; }'
+					'.post-format-link a:hover, .post-format-link a:focus, .post-format-link a:active { color: ' + to + '; }'
 				);
 		} );
 	} );

@@ -78,9 +78,9 @@ html {
 *:before,
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-  box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 article,
 aside,
@@ -484,8 +484,8 @@ textarea {
   border: 1px solid #666666;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
-  border-radius: 3px;
-  -webkit-border-radius: 3px; }
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -790,8 +790,8 @@ a {
     background-color: #f1f1f1;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
-    border-radius: 3px;
     -webkit-border-radius: 3px;
+    border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
@@ -961,7 +961,7 @@ a {
       margin-right: -3em; } }
 
 .byline,
-.updated {
+.updated:not(.published) {
   display: none; }
 
 .published {
@@ -991,6 +991,27 @@ a {
   .entry-footer a {
     font-weight: normal; }
 
+.entry-title a {
+  padding-left: 10px;
+  margin-left: -10px; }
+
+@media (min-width: 600px) {
+  .has-post-thumbnail .entry-title {
+    position: relative;
+    margin-top: -2.5em;
+    margin-left: -5px;
+    margin-right: -5px;
+    padding-bottom: .5em;
+    padding-top: .25em;
+    background: white; }
+    .has-post-thumbnail .entry-title a {
+      padding: 0 15px; }
+
+  .single .has-post-thumbnail .entry-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px; } }
 .entry-footer {
   font-size: 17px;
   font-size: 1.7rem; }
