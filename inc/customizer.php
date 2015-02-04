@@ -17,7 +17,7 @@ function manuscript_customize_register( $wp_customize ) {
 
 	// Add Accent Color to Customizer
 	$wp_customize->add_setting( 'accent_color' , array(
-		'default'     => '#ffd996',
+		'default'     => '#b5e7fc',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'   => 'postMessage',
 	) );
@@ -47,7 +47,7 @@ add_action( 'customize_register', 'manuscript_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function manuscript_customize_preview_js() {
-	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'manuscript_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140815', true );
 }
 add_action( 'customize_preview_init', 'manuscript_customize_preview_js' );
 
@@ -56,7 +56,7 @@ add_action( 'customize_preview_init', 'manuscript_customize_preview_js' );
  */
 function manuscript_customize_css( $is_header_preview ) {
 	// Accent Color
-	if( '#ffd996' !== get_theme_mod('accent_color') ) {
+	if( '#b5e7fc' !== get_theme_mod('accent_color') && false !== get_theme_mod('accent_color') ) {
 		?>
 		<style type="text/css">
 			.site-title .background-path {
@@ -72,7 +72,7 @@ function manuscript_customize_css( $is_header_preview ) {
 		<?php
 	}
 	// Link Color
-	if( '#ffef8b' !== get_theme_mod('link_color') ) {
+	if( '#ffef8b' !== get_theme_mod('link_color') && false !== get_theme_mod('accent_color') ) {
 		?>
 		<style type="text/css">
 			<?php if( $is_header_preview !== true ) { ?>
@@ -102,7 +102,9 @@ function manuscript_customize_css( $is_header_preview ) {
 			}
 			<?php } ?>
 
-			.site-title:hover .background-path {
+			.site-title a:hover .background-path,
+			.site-title a:focus .background-path,
+			.site-title a:active .background-path  {
 				fill: <?php echo get_theme_mod('link_color'); ?>;
 			}
 		</style>

@@ -8,7 +8,7 @@ Version: 1.0a
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: manuscript
-Tags: light, orange, yellow, tan, white, black, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, microformats
+Tags: light, blue, yellow, white, black, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, microformats
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -42,6 +42,7 @@ and Blueprint http://www.blueprintcss.org/
 12.0 - Media
 	12.1 - Captions
 	12.2 - Galleries
+13.0 - Gravity Forms
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 - Reset
@@ -560,6 +561,8 @@ body {
     .site-title a:hover, .site-title a:focus, .site-title a:active {
       background: none;
       color: #404040; }
+      .site-title a:hover .background-path, .site-title a:focus .background-path, .site-title a:active .background-path {
+        fill: #ffef8b; }
   .site-title .header-background {
     position: absolute;
     left: 0;
@@ -568,9 +571,7 @@ body {
     height: 100%;
     z-index: -1; }
   .site-title .background-path {
-    fill: #ffd996; }
-  .site-title:hover .background-path {
-    fill: #ffef8b; }
+    fill: #b5e7fc; }
   @media (min-width: 800px) {
     .site-title {
       margin-top: -.9em; } }
@@ -948,7 +949,7 @@ a {
   margin: 0 0 3em; }
 
 .sticky {
-  border: 3px dashed #ffd996;
+  border: 3px dashed #b5e7fc;
   padding: 1em;
   overflow: hidden;
   margin-left: -1em;
@@ -1019,66 +1020,70 @@ a {
 /*--------------------------------------------------------------
 10.2 Post Formats
 --------------------------------------------------------------*/
-.blog .format-aside .wp-post-image,
-.blog .format-aside .entry-title,
-.blog .format-aside .cat-links,
-.blog .format-aside .tag-links,
-.blog .format-status .wp-post-image,
-.blog .format-status .entry-title,
-.blog .format-status .cat-links,
-.blog .format-status .tag-links,
-.blog .format-video .wp-post-image,
-.blog .format-video .entry-title,
-.blog .format-video .cat-links,
-.blog .format-video .tag-links,
-.blog .format-audio .wp-post-image,
-.blog .format-audio .entry-title,
-.blog .format-audio .cat-links,
-.blog .format-audio .tag-links,
-.blog .format-image .wp-post-image,
-.blog .format-image .entry-title,
-.blog .format-image .cat-links,
-.blog .format-image .tag-links,
-.blog .format-link .wp-post-image,
-.blog .format-link .entry-title,
-.blog .format-link .cat-links,
-.blog .format-link .tag-links,
-.blog .format-quote .wp-post-image,
-.blog .format-quote .entry-title,
-.blog .format-quote .cat-links,
-.blog .format-quote .tag-links,
-.archive .format-aside .wp-post-image,
-.archive .format-aside .entry-title,
-.archive .format-aside .cat-links,
-.archive .format-aside .tag-links,
-.archive .format-status .wp-post-image,
-.archive .format-status .entry-title,
-.archive .format-status .cat-links,
-.archive .format-status .tag-links,
-.archive .format-video .wp-post-image,
-.archive .format-video .entry-title,
-.archive .format-video .cat-links,
-.archive .format-video .tag-links,
-.archive .format-audio .wp-post-image,
-.archive .format-audio .entry-title,
-.archive .format-audio .cat-links,
-.archive .format-audio .tag-links,
-.archive .format-image .wp-post-image,
-.archive .format-image .entry-title,
-.archive .format-image .cat-links,
-.archive .format-image .tag-links,
-.archive .format-link .wp-post-image,
-.archive .format-link .entry-title,
-.archive .format-link .cat-links,
-.archive .format-link .tag-links,
-.archive .format-quote .wp-post-image,
-.archive .format-quote .entry-title,
-.archive .format-quote .cat-links,
-.archive .format-quote .tag-links {
-  display: none; }
+.blog .format-aside,
+.blog .format-status,
+.blog .format-link,
+.blog .format-quote,
+.archive .format-aside,
+.archive .format-status,
+.archive .format-link,
+.archive .format-quote {
+  padding-left: 1em;
+  border-left: 4px solid #ddd; }
+  @media (max-width: 600px) {
+    .blog .format-aside,
+    .blog .format-status,
+    .blog .format-link,
+    .blog .format-quote,
+    .archive .format-aside,
+    .archive .format-status,
+    .archive .format-link,
+    .archive .format-quote {
+      margin-left: -.5em; } }
+  .blog .format-aside .wp-post-image,
+  .blog .format-aside .entry-title,
+  .blog .format-aside .cat-links,
+  .blog .format-aside .tag-links,
+  .blog .format-status .wp-post-image,
+  .blog .format-status .entry-title,
+  .blog .format-status .cat-links,
+  .blog .format-status .tag-links,
+  .blog .format-link .wp-post-image,
+  .blog .format-link .entry-title,
+  .blog .format-link .cat-links,
+  .blog .format-link .tag-links,
+  .blog .format-quote .wp-post-image,
+  .blog .format-quote .entry-title,
+  .blog .format-quote .cat-links,
+  .blog .format-quote .tag-links,
+  .archive .format-aside .wp-post-image,
+  .archive .format-aside .entry-title,
+  .archive .format-aside .cat-links,
+  .archive .format-aside .tag-links,
+  .archive .format-status .wp-post-image,
+  .archive .format-status .entry-title,
+  .archive .format-status .cat-links,
+  .archive .format-status .tag-links,
+  .archive .format-link .wp-post-image,
+  .archive .format-link .entry-title,
+  .archive .format-link .cat-links,
+  .archive .format-link .tag-links,
+  .archive .format-quote .wp-post-image,
+  .archive .format-quote .entry-title,
+  .archive .format-quote .cat-links,
+  .archive .format-quote .tag-links {
+    display: none; }
+.blog .format-link,
+.archive .format-link {
+  border-left-color: #bfbfbf; }
+.blog .format-quote,
+.archive .format-quote {
+  border-left-color: #aaa; }
 
 .post-format-link .genericon {
   line-height: 1.5; }
+.post-format-link a {
+  box-shadow: none; }
 .post-format-link a:hover,
 .post-format-link a:focus,
 .post-format-link a:active {
@@ -1132,7 +1137,7 @@ a {
   word-wrap: break-word; }
 
 .bypostauthor .fn {
-  background: #ffd996; }
+  background: #b5e7fc; }
   .bypostauthor .fn a {
     color: inherit;
     box-shadow: none; }
@@ -1206,7 +1211,6 @@ img.full-size-post-thumbnail {
     margin: 0.8075em 0 0; }
 
 .wp-caption-text {
-  text-align: center;
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: 100; }
@@ -1253,5 +1257,81 @@ img.full-size-post-thumbnail {
   font-size: 17px;
   font-size: 1.7rem;
   font-weight: 100; }
+
+/*--------------------------------------------------------------
+13.0 Gravity Forms
+--------------------------------------------------------------*/
+body .gform_wrapper input[type=text],
+body .gform_wrapper input[type=url],
+body .gform_wrapper input[type=email],
+body .gform_wrapper input[type=tel],
+body .gform_wrapper input[type=number],
+body .gform_wrapper input[type=password],
+body .gform_wrapper select {
+  font-size: 17px;
+  font-size: 1.7rem; }
+body .gform_wrapper select {
+  margin-left: 1px; }
+body .gform_wrapper .gfield_radio li input[type=radio] {
+  margin: 3px 0.5ex; }
+body .gform_wrapper .ginput_complex label,
+body .gform_wrapper .gfield_time_hour label,
+body .gform_wrapper .gfield_time_minute label,
+body .gform_wrapper .gfield_date_month label,
+body .gform_wrapper .gfield_date_day label,
+body .gform_wrapper .gfield_date_year label,
+body .gform_wrapper .instruction,
+body .gform_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title {
+  font-size: 15px;
+  font-size: 1.5rem; }
+body .gform_wrapper .gfield_checkbox li label,
+body .gform_wrapper .gfield_radio li label {
+  line-height: 1.3em; }
+body .gform_wrapper .gf_progressbar {
+  height: 26px;
+  line-height: 26px !important;
+  background-image: none; }
+body .gform_wrapper .gf_progressbar_percentage {
+  font-size: 15px !important;
+  font-family: inherit;
+  height: 26px; }
+body .gform_wrapper .percentbar_blue {
+  background-image: none; }
+
+/*--------------------------------------------------------------
+14.0 The Events Calendar
+--------------------------------------------------------------*/
+#tribe-events-pg-template {
+  max-width: 800px;
+  background: white; }
+  #tribe-events-pg-template #tribe-events {
+    padding: 1em 2em; }
+    @media (max-width: 600px) {
+      #tribe-events-pg-template #tribe-events {
+        padding: 0; } }
+  #tribe-events-pg-template .tribe-bar-views-list a {
+    box-shadow: none; }
+  #tribe-events-pg-template .tribe-events-back {
+    font-size: 19px;
+    font-size: 1.9rem; }
+  #tribe-events-pg-template .tribe-events-list-event-title,
+  #tribe-events-pg-template h2,
+  #tribe-events-pg-template h3 {
+    font-weight: normal; }
+  #tribe-events-pg-template .tribe-events-button,
+  #tribe-events-pg-template #tribe-events .tribe-events-button {
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 100; }
+  #tribe-events-pg-template ul.tribe-events-sub-nav a,
+  #tribe-events-pg-template .tribe-events-back a,
+  #tribe-events-pg-template .tribe-events-list-widget .tribe-events-widget-link a,
+  #tribe-events-pg-template .tribe-events-adv-list-widget .tribe-events-widget-link a,
+  #tribe-events-pg-template .tribe-events-event-meta {
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal; }
+  #tribe-events-pg-template .published {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */

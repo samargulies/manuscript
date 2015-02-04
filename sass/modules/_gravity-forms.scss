@@ -1,0 +1,47 @@
+body .gform_wrapper {
+	input[type=text],
+	input[type=url],
+	input[type=email],
+	input[type=tel],
+	input[type=number],
+	input[type=password],
+	select {
+		@include font-size(1.7);
+	}
+	select {
+		margin-left: 1px;
+	}
+
+	.gfield_radio li input[type=radio] {
+		margin: 3px 0.5ex;
+	}
+	.ginput_complex label,
+	.gfield_time_hour label,
+	.gfield_time_minute label,
+	.gfield_date_month label,
+	.gfield_date_day label,
+	.gfield_date_year label,
+	.instruction,
+	.gf_progressbar_wrapper h3.gf_progressbar_title {
+		@include font-size(1.5);
+	}
+	
+	.gfield_checkbox li label,
+	.gfield_radio li label {
+		line-height: 1.3em;
+	}
+
+	.gf_progressbar {
+		height: 26px;
+		line-height: 26px !important;
+		background-image: none;
+	}
+	.gf_progressbar_percentage {
+		font-size: 15px !important;
+		font-family: inherit;
+		height: 26px;
+	}
+	.percentbar_blue {
+		background-image: none;
+	}
+}

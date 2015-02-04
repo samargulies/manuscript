@@ -2,11 +2,16 @@
 .archive {
 	.format-aside,
 	.format-status,
-	.format-video,
-	.format-audio,
-	.format-image,
 	.format-link,
 	.format-quote {
+		
+		padding-left: 1em;
+		border-left: 4px solid #ddd;
+
+		@include breakpoint(medium) {
+			margin-left: -.5em;
+		}
+
 		.wp-post-image,
 		.entry-title,
 		.cat-links,
@@ -14,11 +19,23 @@
 			display: none;
 		}
 	}
+
+	.format-link {
+		border-left-color: #bfbfbf;
+	}
+	.format-quote { 
+		border-left-color: #aaa;
+	}
+
 }
 
 .post-format-link {
 	.genericon {
 		line-height: $font__line-height-body;
+	}
+	
+	a {
+		box-shadow: none;
 	}
 
 	a:hover,

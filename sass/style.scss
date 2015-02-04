@@ -8,7 +8,7 @@ Version: 1.0a
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: manuscript
-Tags: light, orange, yellow, tan, white, black, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, microformats
+Tags: light, blue, yellow, white, black, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, microformats
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -43,6 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 12.0 - Media
 	12.1 - Captions
 	12.2 - Galleries
+13.0 - Gravity Forms
 --------------------------------------------------------------*/
 @import "variables/variables";
 @import "mixins/mixins-master";
@@ -111,3 +112,15 @@ and Blueprint http://www.blueprintcss.org/
 12.0 Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+13.0 Gravity Forms
+--------------------------------------------------------------*/
+@import "modules/gravity-forms";
+
+/*--------------------------------------------------------------
+14.0 The Events Calendar
+--------------------------------------------------------------*/
+@import "modules/the-events-calendar";
+
+
