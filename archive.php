@@ -24,7 +24,15 @@ get_header(); ?>
 							printf( __( 'Tagged %s', 'manuscript' ), '<span>' . single_tag_title('', false) . '</span>' );
 
 						elseif ( is_author() ) :
-							printf( __( 'By %s', 'manuscript' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							
+							// If the Co-Authors Plus plugin is active, let its template tag take over the author output
+							// This  allows for guest author archives with the plugin
+							// (see http://vip.wordpress.com/documentation/incorporate-co-authors-plus-template-tags-into-your-theme/)
+							if ( function_exists( 'coauthors' ) ) {
+								printf( __( 'By %s', 'manuscript' ), '<span class="vcard">' . coauthors( null, null, null, null, false ) . '</span>' );
+							} else {
+								printf( __( 'By %s', 'manuscript' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							}
 
 						elseif ( is_day() ) :
 							printf( __( 'From %s', 'manuscript' ), '<span>' . get_the_date() . '</span>' );
