@@ -1,0 +1,3 @@
+[submodule "fonts/genericons"]
+	path = fonts/genericons
+	url = https://github.com/Automattic/Genericons.git
