@@ -67,6 +67,9 @@ function manuscript_setup() {
 		'default-color' => 'f3f3f3',
 		'default-image' => '',
 	) ) );
+	
+	// Let WordPress define the title tag
+	add_theme_support( 'title-tag' );
 
 	// Setup editor stylesheet at editor-style.css
 	add_editor_style( 'editor-style.css' );
