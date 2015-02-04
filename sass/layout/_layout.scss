@@ -96,6 +96,10 @@ body {
 		&:active {
 			background: none;
 			color: $color__text-main;
+
+			.background-path {
+				fill: $color__link-background;
+			}
 		}
 	}
 
@@ -112,9 +116,6 @@ body {
 		fill: $color__accent;
 	}
 
-	&:hover .background-path {
-		fill: $color__link-background;
-	}
 
 	@include breakpoint(min-large) {
 		margin-top: -.9em;

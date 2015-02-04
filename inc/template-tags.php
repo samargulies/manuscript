@@ -111,11 +111,24 @@ if ( ! function_exists( 'manuscript_posted_by' ) ) :
  * Prints HTML with meta information for the current author.
  */
 function manuscript_posted_by() {
-
-	$byline = sprintf(
-		_x( 'By %s', 'post author', 'manuscript' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+	
+	// If the Co-Authors Plus plugin is active, let its template tag take over the author output
+	// (see http://vip.wordpress.com/documentation/incorporate-co-authors-plus-template-tags-into-your-theme/)
+	if ( function_exists( 'coauthors_posts_links' ) ) {
+		
+		$byline = sprintf(
+			_x( 'By %s', 'post author', 'manuscript' ),
+			coauthors_posts_links( null, null, null, null, false )
+		);
+		
+	} else {
+		
+		$byline = sprintf(
+			_x( 'By %s', 'post author', 'manuscript' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
+		
+	}
 
 	echo '<span class="byline"> ' . $byline . '</span>';
 
@@ -205,3 +218,50 @@ function manuscript_category_transient_flusher() {
 }
 add_action( 'edit_category', 'manuscript_category_transient_flusher' );
 add_action( 'save_post',     'manuscript_category_transient_flusher' );
+
+/**
+ * Returns true if a blog has any pages
+ *
+ * @return bool
+ */
+function manuscript_site_has_pages() {
+
+	if ( false === ( $all_the_cool_pages = get_transient( 'manuscript_pages' ) ) ) {
+
+		$all_the_cool_pages = get_pages( array(
+			'hierarchical' => false,
+
+			// We only need to know if there is at least one page.
+			'number' => 1
+		) );
+
+
+		// Count the number of pages.
+		$all_the_cool_pages = count( $all_the_cool_pages );
+
+		set_transient( 'manuscript_pages', $all_the_cool_pages );
+
+	}
+	// If this blog has more than 0 pages return true, if it has no pages so return false.
+	return $all_the_cool_pages > 0;
+}
+
+/**
+ * Flush out the transients used in manuscript_site_has_pages.
+ */
+function manuscript_page_transient_flusher() {
+	// Like, beat it. Dig?
+	delete_transient( 'manuscript_pages' );
+}
+add_action( 'trash_page', 'manuscript_page_transient_flusher' );
+add_action( 'publish_page', 'manuscript_page_transient_flusher' );
+
+/**
+ *  Custom callback for wp_nav_menu to call wp_page_menu(), but only if we 
+ *  have any pages at all on the site 
+ */
+function manuscript_page_menu() {
+	if( manuscript_site_has_pages() ) {
+		wp_page_menu();
+	}
+}

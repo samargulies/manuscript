@@ -42,7 +42,12 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'manuscript' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php 
+			wp_nav_menu( array( 
+				'theme_location' => 'primary',
+				'fallback_cb'    => 'manuscript_page_menu',
+			) ); 
+			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
