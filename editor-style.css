@@ -103,8 +103,8 @@ select,
 textarea {
   color: #404040;
   font-family: "LatinModernMono", "Courier New", courier, monospace;
-  font-size: 19px;
-  font-size: 1.9rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.5; }
   @media (max-width: 600px) {
     body,
@@ -154,7 +154,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: normal;
-  color: #222222; }
+  color: #222; }
 
 h1 {
   font-size: 26px;
@@ -244,7 +244,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #eeeeee;
+  background: #eee;
   font-family: "LatinModernMono", "Courier New", courier, monospace;
   font-size: 17px;
   font-size: 1.7rem;
@@ -265,7 +265,7 @@ code, kbd, tt, var {
   margin: 0 -5px 0 -3px; }
 
 abbr, acronym {
-  border-bottom: 1px dashed #666666;
+  border-bottom: 1px dashed #666;
   cursor: help;
   letter-spacing: .1rem;
   text-transform: uppercase; }
@@ -275,7 +275,7 @@ a acronym {
   border-bottom-color: #b3b3b3; }
 
 mark, ins {
-  background: #d4ff8a;
+  background: #D4FF8A;
   text-decoration: none;
   padding: 0 5px 0 3px;
   margin: 0 -5px 0 -3px; }
@@ -304,7 +304,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #cccccc;
+  background-color: #ccc;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -317,6 +317,9 @@ ul {
 
 ol {
   list-style: decimal; }
+
+li {
+  margin-bottom: 0.6em; }
 
 li > ul,
 li > ol {
@@ -414,12 +417,12 @@ img.full-size-post-thumbnail {
   position: relative;
   left: -1em;
   right: -1em;
-  max-width: calc(100% + 2em ); }
+  max-width: calc( 100% + 2em ); }
   @media (min-width: 600px) {
     img.full-size-post-thumbnail {
       left: -2em;
       right: -2em;
-      max-width: calc(100% + 4em ); } }
+      max-width: calc( 100% + 4em ); } }
 
 /*--------------------------------------------------------------
 12.1 Captions
