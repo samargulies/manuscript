@@ -100,6 +100,12 @@ function manuscript_customize_css( $is_header_preview ) {
 			.post-format-link a:active {
 				color: <?php echo get_theme_mod('link_color'); ?>;
 			}
+			
+			.site-main .attachment-navigation .nav-previous a::after,
+			.site-main .attachment-navigation .nav-next a::after {
+				color: <?php echo get_theme_mod('link_color'); ?>;
+			}
+			
 			<?php } ?>
 
 			.site-title a:hover .background-path,

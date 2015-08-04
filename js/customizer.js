@@ -59,7 +59,8 @@
 					'.entry-content a, .comment-content a { box-shadow: inset 0 -5px 0 ' + to + '; }' +
 					'a:hover, a:focus, a:active, .main-navigation ul ul li:hover > a, .page-links a { background-color: ' + to + '; }' + 
 					'.site-title a:hover .background-path, .site-title a:focus .background-path, .site-title a:active .background-path { fill: ' + to + '; }' +
-					'.post-format-link a:hover, .post-format-link a:focus, .post-format-link a:active { color: ' + to + '; }'
+					'.post-format-link a:hover, .post-format-link a:focus, .post-format-link a:active { color: ' + to + '; }' +
+					'.site-main .attachment-navigation .nav-previous a::after, .site-main .attachment-navigation .nav-next a::after { color: ' + to + ';}'
 				);
 		} );
 	} );

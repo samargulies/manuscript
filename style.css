@@ -354,8 +354,7 @@ li {
 
 li > ul,
 li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin: 0.6em 0 0 1.5em; }
 
 dt {
   font-weight: bold; }
@@ -762,7 +761,7 @@ a {
       text-align: center;
       line-height: 150px;
       font-size: 100px;
-      color: #ff8ac8; }
+      color: #ffef8b; }
     .site-main .attachment-navigation .nav-previous a:hover,
     .site-main .attachment-navigation .nav-next a:hover {
       background: none; }
